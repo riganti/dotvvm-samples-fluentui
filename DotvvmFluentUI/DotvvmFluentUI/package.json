@@ -1,0 +1,19 @@
+{
+  "name": "dotvvmwebcomponents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fluentui/web-components": "^0.21.0",
+    "rollup": "^2.48.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build-production": "rollup -c --environment BUILD:production"
+  }
+}

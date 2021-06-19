@@ -1,0 +1,34 @@
+﻿@viewModel DotvvmFluentUI.ViewModels.BindingViewModel, DotvvmFluentUI
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <fluent-design-system-provider use-defaults>
+
+        <div class="form-item">
+            <fluent-progress min="0" max="100" value="{value: Progress}"></fluent-progress>
+        </div>
+
+        <div class="form-item">
+            <fluent-number-field min="0" max="100" Fast.Bind-value="{value: Progress}"></fluent-number-field>
+        </div>
+
+        <div class="form-item">
+            <fluent-checkbox Fast.Bind-checked="{value: Checked}">Show name</fluent-checkbox>
+        </div>
+
+        <div class="form-item" Visible="{value: Checked}">
+            <fluent-text-field placeholder="Enter your name"></fluent-text-field>
+        </div>
+
+        <div class="form-item">
+            <fluent-button appearance="accent" Events.Click="{command: Save()}">Save</fluent-button>
+            <fluent-button>Cancel</fluent-button>
+        </div>
+
+    </fluent-design-system-provider>
+
+    <dot:RequiredResource Name="fluentui-custom-bundle" />
+
+</dot:Content>
+

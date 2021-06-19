@@ -1,0 +1,37 @@
+﻿@viewModel DotvvmFluentUI.ViewModels.DefaultViewModel, DotvvmFluentUI
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="HeadContent">
+
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+
+</dot:Content>
+
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <fluent-design-system-provider use-defaults>
+
+        <div class="form-item">
+            <fluent-text-field placeholder="Enter your name"></fluent-text-field>
+        </div>
+
+        <div class="form-item">
+            <fluent-checkbox checked="true">Remember me</fluent-checkbox>
+        </div>
+
+        <div class="form-item">
+            <fluent-select>
+                <fluent-option>One</fluent-option>
+                <fluent-option disabled>Two</fluent-option>
+            </fluent-select>
+        </div>
+
+        <div class="form-item">
+            <fluent-button appearance="accent">Save</fluent-button>
+            <fluent-button>Cancel</fluent-button>
+        </div>
+
+    </fluent-design-system-provider>
+
+</dot:Content>

@@ -1,0 +1,30 @@
+﻿@viewModel DotvvmFluentUI.ViewModels.MasterPageViewModel, DotvvmFluentUI
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DotvvmFluentUI</title>
+    <dot:RequiredResource Name="app-css" />
+
+    <dot:ContentPlaceHolder ID="HeadContent" />
+
+</head>
+<body>
+
+ 	<header>
+         <nav>
+             <ul>
+                 <li><dot:RouteLink RouteName="Default" Text="Raw web components" /></li>
+                 <li><dot:RouteLink RouteName="Binding" Text="Binding to components" /></li>
+                 <li><dot:RouteLink RouteName="Collections" Text="Binding collections" /></li>
+             </ul>
+         </nav>
+    </header>
+
+    <main>
+        <dot:ContentPlaceHolder ID="MainContent" />
+    </main>
+
+</body>
+</html>

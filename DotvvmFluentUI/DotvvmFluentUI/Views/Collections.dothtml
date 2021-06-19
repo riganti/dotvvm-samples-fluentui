@@ -1,0 +1,32 @@
+﻿@viewModel DotvvmFluentUI.ViewModels.CollectionsViewModel, DotvvmFluentUI
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <fluent-design-system-provider use-defaults>
+
+        <div class="form-item">
+            <fluent-select Fast.Bind-value="{value: SelectedValue}">
+                <fluent-option value="1">One</fluent-option>
+                <fluent-option value="2">Two</fluent-option>
+                <fluent-option value="3">Three</fluent-option>
+                <fluent-option value="4">Four</fluent-option>
+                <fluent-option value="5">Five</fluent-option>
+            </fluent-select>
+        </div>
+
+        <div class="form-item">
+            <dot:Repeater DataSource="{value: Items}" 
+                          WrapperTagName="fluent-select"
+                          Fast.Bind-value="{value: SelectedValue}"
+                          RenderSettings.Mode="Server">
+                <fluent-option value="{value: Value}">{{value: Name}}</fluent-option>
+            </dot:Repeater>
+        </div>
+
+    </fluent-design-system-provider>
+
+    <dot:RequiredResource Name="fluentui-custom-bundle" />
+
+</dot:Content>
+
